@@ -1,3 +1,4 @@
+#Link del tutorial en YouTube: https://www.youtube.com/watch?v=Twoem98AOAc
 #importamos los paquetes para analizar 
 import cv2                              #Libreria openCV
 import numpy as np                      #Libreria numpy(matrices...)
