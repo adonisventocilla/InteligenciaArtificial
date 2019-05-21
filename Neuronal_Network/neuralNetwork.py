@@ -25,3 +25,5 @@ class neural_network:
         #inputs: la data
         #weights: los pesos aleatorios
         return dot(inputs,self.weights)
+        
+     confusionmatrix(predict, reales)
