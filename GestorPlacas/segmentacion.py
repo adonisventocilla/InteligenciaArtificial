@@ -8,10 +8,13 @@ from matplotlib import pyplot as plt    #Libreria pyplot(graficación)
 """
 PRE-PROCESAMIENTO
 """
-for i in range(0,1):
+for i in range(0,4):
     # Carga de imagenes
     directorio = "./regionPlacas/recorte (%d).jpg" %(i+1)
     a = cv2.imread(directorio)
+    """
+    AUN FALTA ARREGLAR ESTA PARTE... 
+    """
 
     #Extraccion de capas de la imagen
     rgB = np.matrix(a[:,:,0])
@@ -74,7 +77,7 @@ for i in range(0,1):
     #MASCARA
     #x = desde la esquina superior izquierda hasta la esquina superior derecha
     #y = desde la esquina superior izquierda hasta la esquina inferior izquierda
-    b = a[BOX[1]:BOX[1]+BOX[3],BOX[0]:BOX[0]+BOX[2],:]
+    b = a[int(BOX[1]):int(BOX[1]+BOX[3]),int(BOX[0]):int(BOX[0]+BOX[2]),:]
 
     cv2.imshow('Imagen de la placa',b)
     cv2.waitKey(0)
